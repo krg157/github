@@ -1,0 +1,15 @@
+C:\Users\lsprog\github\obj\Debug\net8.0\github.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lsprog\github\obj\Debug\net8.0\github.AssemblyInfoInputs.cache
+C:\Users\lsprog\github\obj\Debug\net8.0\github.AssemblyInfo.cs
+C:\Users\lsprog\github\obj\Debug\net8.0\github.csproj.CoreCompileInputs.cache
+C:\Users\lsprog\github\obj\Debug\net8.0\github.sourcelink.json
+C:\Users\lsprog\github\bin\Debug\net8.0\github.exe
+C:\Users\lsprog\github\bin\Debug\net8.0\github.deps.json
+C:\Users\lsprog\github\bin\Debug\net8.0\github.runtimeconfig.json
+C:\Users\lsprog\github\bin\Debug\net8.0\github.dll
+C:\Users\lsprog\github\bin\Debug\net8.0\github.pdb
+C:\Users\lsprog\github\obj\Debug\net8.0\github.dll
+C:\Users\lsprog\github\obj\Debug\net8.0\refint\github.dll
+C:\Users\lsprog\github\obj\Debug\net8.0\github.pdb
+C:\Users\lsprog\github\obj\Debug\net8.0\github.genruntimeconfig.cache
+C:\Users\lsprog\github\obj\Debug\net8.0\ref\github.dll
