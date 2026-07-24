@@ -16,13 +16,13 @@ class LastOneInTheChamber
     Console.WriteLine("| Vítej ve hře Last One In The Chamber |");
     Console.WriteLine("========================================");
     Console.WriteLine("Jakou chceš obtížnost?");
-    Console.WriteLine("Easy (E) - 2-10");
+    Console.WriteLine("Easy (E) - 4-10");
     Console.WriteLine("Medium (M) - 10-20");
     Console.WriteLine("Hard (H) - 20-30");
     string difficulty = Console.ReadLine();
     if(difficulty == "E"|difficulty == "e")
         {
-            MinCislo = 2;
+            MinCislo = 4; //Fanda nám všem dokázal že easy, bylo až moc easy. Děkujeme! <3 (puvodne byl min je 2)
             MaxCislo = 11;
         }
     else if(difficulty == "M"|difficulty == "m")
@@ -131,7 +131,7 @@ class LastOneInTheChamber
         Console.WriteLine("======================");
         Random rand = new Random();
         int nahoda = rand.Next(1, 3);
-        Console.WriteLine("1) Vyhoďit jeden náboj z komory");
+        Console.WriteLine("1) Vyhoďit jeden náboj ze zásobíku");
         Console.WriteLine("2) Vystřelit");
         Console.WriteLine("3) Použít předmět");
         Console.WriteLine("4) Přestat hrát");
