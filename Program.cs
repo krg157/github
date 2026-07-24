@@ -1,10 +1,10 @@
-﻿
+﻿//jméno hry
 class LastOneInTheChamber
 {
 
 
 
-
+// Životy, inventář a začátek 
     static void Main()  
     {
     Console.Clear();
@@ -21,7 +21,7 @@ class LastOneInTheChamber
     ZacatekHry(lifes, Inventory);
     }
     }
-
+// Vypíše tutorial a po stisknutí jakého koliv tlačítka začne hra.
     static void Tutorial(int lifes, string[] Inventory)
     {
         Console.Clear();
@@ -40,6 +40,7 @@ class LastOneInTheChamber
         Console.ReadKey();
         ZacatekHry(lifes, Inventory);
     }
+    // Generace náhodného počtu munice v zásobníku.
     static void ZacatekHry(int lifes, string[] Inventory)
 
         {
@@ -54,10 +55,11 @@ class LastOneInTheChamber
             Hra(lifes, bullets/2, bullets/2, bullets, Inventory);
         }
         }
+        //Hlavní menu hry
     static void Hra(int lifes, int lifeRnd, int blankRnd, int bullets, string[] Inventory)
     {
 
-
+//Kontrola žívotů a počtů náboju a označuje konec hry a pošle hráče zpět na start.
         if(lifes==0)
         {
             Console.Clear();
@@ -76,6 +78,7 @@ class LastOneInTheChamber
             Console.ReadKey();
             Main();
         }
+        //Text který vypusuje možnosti hry.
         Console.Clear();
         Console.WriteLine($"Životy: {lifes} ");
         Console.WriteLine($"Střely dohromady: {bullets}");
@@ -87,6 +90,7 @@ class LastOneInTheChamber
         Console.WriteLine("3) Použít předmět");
         Console.WriteLine("4) Přestat hrát");
         string Moznost = Console.ReadLine();
+        //Vybírání možností 1-4 a volání příslušných metod.
         if(Moznost=="1")
             {
                 BulletOut(Moznost, nahoda, lifeRnd,blankRnd,lifes, bullets, Inventory);
@@ -101,6 +105,7 @@ class LastOneInTheChamber
             }
         else if(Moznost=="4")
             {
+                //Vypínač hry
                 Console.Clear();
                 Console.WriteLine("Vrať se brzy!");
             }
@@ -112,6 +117,7 @@ class LastOneInTheChamber
         }
     }
 
+// Vygeneruje náhodné sudé čislo od 10-20. 
     static int Nahoda()
     {
 
@@ -127,6 +133,7 @@ class LastOneInTheChamber
 
     }
     }
+    // 1. metoda která dovoluje hráči vyhodit munici ze zásobníku.
     static void BulletOut(string Moznost, int Nahoda, int LifeRnd, int BlankRnd, int lifes, int bullets, string[] Inventory)
 
     {
@@ -134,6 +141,7 @@ class LastOneInTheChamber
             if(Nahoda==1)
             {
                if(BlankRnd>=1)
+               //Systém který odebere život hráči po špatné volbě.
                 {
                 Console.Clear();
                 lifes -= 1;
@@ -157,6 +165,7 @@ class LastOneInTheChamber
                 Console.Clear();
                 Console.WriteLine("Realný náboj");
                 Console.WriteLine("O žádné životy si nepřišel");
+                //Vybere náhodný item a dá  možnost hráči  si ho uložit do inventáře.
                 LifeRnd -= 1;
                 bullets -= 1;
                 string item = ItemRnd();
@@ -183,7 +192,7 @@ class LastOneInTheChamber
       }
 
     }
-
+//2. metoda která povoluje hráči vystřelit náboj.
     static void Shoot(string Moznost, int Nahoda, int LifeRnd, int BlankRnd, int lifes, int bullets, string[] Inventory)
     {
 
@@ -199,6 +208,7 @@ class LastOneInTheChamber
                 bullets -= 1;
                 string item = ItemRnd();
                 Console.WriteLine($"Dostal jsi {item}");
+                 //Vybere náhodný item a dá  možnost hráči  si ho uložit do inventáře.
                 Console.WriteLine("Do jakého slotu (1-4) ho chceš uložit? (zadej cokoliv jiného pro zahození)");
                 bool parsed = int.TryParse(Console.ReadLine(), out int slot);
                 if(parsed)
@@ -217,6 +227,7 @@ class LastOneInTheChamber
                     Shoot(Moznost, Nahoda+1, LifeRnd, BlankRnd, lifes, bullets, Inventory);
                 }
             }
+            //Systém který odebere život hráči po špatné volbě.
             if(Nahoda==2)
             {
                 if(LifeRnd>=1)
@@ -240,6 +251,7 @@ class LastOneInTheChamber
       }
 
     }
+    //3. metoda která dovoluje  hráči otevřít inventář a využít předmět.
     static void Inv(string[]Inventory,int lifes, int lifeRnd, int blankRnd, int bullets)
     {
         Console.Clear();
@@ -253,6 +265,7 @@ class LastOneInTheChamber
         if(parsed)
         {
             if(volba<5)
+            //Všechny  itemy a co dělají.
              {   if(Inventory[volba-1] == "Léky")
                 {
                     Console.WriteLine($"Použil jsi {Inventory[volba-1]}");
@@ -310,6 +323,7 @@ class LastOneInTheChamber
             }
             
     }
+    //Náhodný výběr předmětů.
 static string ItemRnd()
 {
     string[] items = {"Léky","Pivo", "PivoXL"};
