@@ -1,0 +1,15 @@
+/home/student/github/bin/Debug/net10.0/github
+/home/student/github/bin/Debug/net10.0/github.deps.json
+/home/student/github/bin/Debug/net10.0/github.runtimeconfig.json
+/home/student/github/bin/Debug/net10.0/github.dll
+/home/student/github/bin/Debug/net10.0/github.pdb
+/home/student/github/obj/Debug/net10.0/github.GeneratedMSBuildEditorConfig.editorconfig
+/home/student/github/obj/Debug/net10.0/github.AssemblyInfoInputs.cache
+/home/student/github/obj/Debug/net10.0/github.AssemblyInfo.cs
+/home/student/github/obj/Debug/net10.0/github.csproj.CoreCompileInputs.cache
+/home/student/github/obj/Debug/net10.0/github.sourcelink.json
+/home/student/github/obj/Debug/net10.0/github.dll
+/home/student/github/obj/Debug/net10.0/refint/github.dll
+/home/student/github/obj/Debug/net10.0/github.pdb
+/home/student/github/obj/Debug/net10.0/github.genruntimeconfig.cache
+/home/student/github/obj/Debug/net10.0/ref/github.dll

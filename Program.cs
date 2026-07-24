@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-
+﻿
 class LastOneInTheChamber
 {
 
@@ -162,7 +161,7 @@ class LastOneInTheChamber
                 bullets -= 1;
                 string item = ItemRnd();
                 Console.WriteLine($"Dostal jsi {item}");
-                Console.WriteLine("Do jakého slotu ho chceš uložit? (zadej cokoliv jiného pro zahození)");
+                Console.WriteLine("Do jakého slotu (1-4) ho chceš uložit? (zadej cokoliv jiného pro zahození)");
                 bool parsed = int.TryParse(Console.ReadLine(), out int slot);
                 if(parsed)
                 {
@@ -200,7 +199,7 @@ class LastOneInTheChamber
                 bullets -= 1;
                 string item = ItemRnd();
                 Console.WriteLine($"Dostal jsi {item}");
-                Console.WriteLine("Do jakého slotu ho chceš uložit? (zadej cokoliv jiného pro zahození)");
+                Console.WriteLine("Do jakého slotu (1-4) ho chceš uložit? (zadej cokoliv jiného pro zahození)");
                 bool parsed = int.TryParse(Console.ReadLine(), out int slot);
                 if(parsed)
                 {
@@ -264,17 +263,26 @@ class LastOneInTheChamber
                 {
                     Console.WriteLine($"Použil jsi {Inventory[volba-1]}");
                     Console.WriteLine($"Magicky za zbraně zmizel jeden realný náboj.");
+                    if(lifeRnd>0)
+                    {
                     lifeRnd = lifeRnd - 1;
                     bullets = bullets - 1;
-                }
+                    }
+                }   
                 else if(Inventory[volba-1] == "PivoXL")
                 {
                     Console.WriteLine($"Použil jsi {Inventory[volba-1]}");
                     Console.WriteLine($"Magicky za zbraně zmizel jeden realný a jeden falešný náboj.");
-                    
-                    lifeRnd = lifeRnd - 1;
+                    if(blankRnd>0)
+                    {
                     blankRnd = blankRnd - 1;
-                    bullets = bullets - 2;
+                    bullets = bullets - 1;
+                    }
+                    if(lifeRnd>0)
+                    {
+                    lifeRnd = lifeRnd - 1;
+                    bullets = bullets - 1;
+                    }
                 }
                 else if(Inventory[volba-1] == "Nic")
                 {
